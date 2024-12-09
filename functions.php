@@ -8,6 +8,16 @@ function theme_slug_setup() {
 	load_theme_textdomain('argon', get_template_directory() . '/languages');
 }
 add_action('after_setup_theme','theme_slug_setup');
+function enqueue_custom_scripts() {
+    // 先注册并加载你需要的 JavaScript 文件
+    wp_enqueue_script('my-custom-script', get_template_directory_uri() . '/argontheme.js', array('jquery'), null, true);
+    
+    // 将 ajax_url 传递给 JavaScript
+    wp_localize_script('my-custom-script', 'myAjaxUrl', array(
+        'ajaxUrl' => admin_url('admin-ajax.php', 'https')
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 $argon_version = !(wp_get_theme() -> Template) ? wp_get_theme() -> Version : wp_get_theme(wp_get_theme() -> Template) -> Version;
 $GLOBALS['theme_version'] = $argon_version;

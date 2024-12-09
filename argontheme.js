@@ -857,7 +857,7 @@ if (argonConfig.waterflow_columns != "1") {
 			$("#comment_pin_comfirm_dialog .btn-comfirm").attr("disabled", true).prepend(__(`<span class="btn-inner--icon" style="margin-right: 10px;"><i class="fa fa-spinner fa-spin"></i></span>`));
 			$.ajax({
 				type: 'POST',
-				url: admin_url('admin-ajax.php', 'https'),
+				url: myAjaxUrl.ajaxUrl,
 				dataType : "json",
 				data: {
 					action: "pin_comment",
@@ -1075,7 +1075,7 @@ if (argonConfig.waterflow_columns != "1") {
 
 		$.ajax({
 			type: 'POST',
-			url: admin_url('admin-ajax.php', 'https'),
+			url: myAjaxUrl.ajaxUrl,
 			dataType : "json",
 			data: {
 				action: "ajax_post_comment",
@@ -1258,7 +1258,7 @@ if (argonConfig.waterflow_columns != "1") {
 
 		$.ajax({
 			type: 'POST',
-			url: admin_url('admin-ajax.php', 'https'),
+			url: myAjaxUrl.ajaxUrl,
 			dataType : "json",
 			data: {
 				action: "user_edit_comment",
@@ -1365,7 +1365,7 @@ $(document).on("click" , ".comment-upvote" , function(){
 	ID = $this.attr("data-id");
 	$this.addClass("comment-upvoting");
 	$.ajax({
-		url : admin_url('admin-ajax.php', 'https'),
+		url : myAjaxUrl.ajaxUrl,
 		type : "POST",
 		dataType : "json",
 		data : {
@@ -1475,7 +1475,7 @@ function showCommentEditHistory(id){
 	$("#comment_edit_history").modal(null);
 	$.ajax({
 		type: 'POST',
-		url: admin_url('admin-ajax.php', 'https'),
+		url: myAjaxUrl.ajaxUrl,
 		dataType : "json",
 		data: {
 			action: "get_comment_edit_history",
@@ -2053,7 +2053,7 @@ $(document).on("click" , ".shuoshuo-upvote" , function(){
 	ID = $this.attr("data-id");
 	$this.addClass("shuoshuo-upvoting");
 	$.ajax({
-		url : admin_url('admin-ajax.php', 'https'),
+		url : myAjaxUrl.ajaxUrl,
 		type : "POST",
 		dataType : "json",
 		data : {

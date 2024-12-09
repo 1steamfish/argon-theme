@@ -149,11 +149,13 @@
 									content: attr(captcha);
 								}
 							</style>
+							<?php $ajax_url = admin_url('admin-ajax.php', 'https');?>
 							<?php if (get_option('argon_get_captcha_by_ajax', 'false') == 'true') {?>
 								<script>
+									var ajax_url = "<?php echo $ajax_url; ?>";
 									$(".post-comment-captcha-container").attr("captcha", "Loading...");
 									$.ajax({
-										url : admin_url('admin-ajax.php', 'https'),
+										url : ajax_url,
 										type : "POST",
 										dataType : "json",
 										data : {
