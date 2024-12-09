@@ -153,7 +153,7 @@
 								<script>
 									$(".post-comment-captcha-container").attr("captcha", "Loading...");
 									$.ajax({
-										url : argonConfig.wp_path + "wp-admin/admin-ajax.php",
+										url : admin_url('admin-ajax.php', 'https'),
 										type : "POST",
 										dataType : "json",
 										data : {
