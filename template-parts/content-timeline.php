@@ -16,18 +16,7 @@
 				</style>";
 			}
 		?>
-		<a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><h1 class="h1-style"><?php the_title(); ?></h1>
- 
-		<style>
-		.h1-style {
-			margin: 0!important;
-			padding: 0;
-			display: block;
-			height: 0;
-			width: 0;
-			overflow: hidden;
-		}
-		</style>   
+		<a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		<div class="post-meta">
 			<?php
 				$metaList = explode('|', get_option('argon_article_meta', 'time|views|comments|categories'));
