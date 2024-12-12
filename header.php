@@ -437,7 +437,9 @@
 	<?php } ?>
 	<?php if ($banner_size == 'fullscreen') { ?>
 		<div class="cover-scroll-down">
-			<i class="fa fa-angle-down" aria-hidden="true"></i>
+			<i class="fa fa-angle-down" aria-hidden="true" id="pointer1"></i>
+			<i class="fa fa-angle-down" aria-hidden="true" id="pointer2"></i>
+			<i class="fa fa-angle-down" aria-hidden="true" id="pointer3"></i>
 		</div>
 	<?php } ?>
 </section>
