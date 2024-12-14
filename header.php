@@ -251,6 +251,14 @@
 
 <?php echo get_option('argon_custom_html_head'); ?>
 
+<script>
+function pjaxNavigate(url) {
+    $.pjax({
+      url: url, 
+    });
+}
+</script>
+
 <style id="themecolor_css">
 	<?php
 		$themecolor_rgbstr = hex2str($themecolor);

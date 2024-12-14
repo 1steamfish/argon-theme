@@ -48,7 +48,7 @@
 		$trim_words_count = get_option('argon_trim_words_count', 175);
 	?>
 	<?php if ($trim_words_count > 0){ ?>
-		<div class="post-content">
+		<div class="post-content" onclick="pjaxNavigate('<?php the_permalink(); ?>')" style="cursor: pointer">
 			<?php
 				if (get_option("argon_hide_shortcode_in_preview") == 'true'){
 					$preview = wp_trim_words(do_shortcode(get_the_content('...')), $trim_words_count);
