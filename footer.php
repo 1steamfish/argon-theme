@@ -2,7 +2,9 @@
 						<?php
 							echo get_option('argon_footer_html');
 						?>
+						<!--- 可注释掉此行，在页脚代码处统一编辑
 						<div>Theme <a href="https://github.com/solstice23/argon-theme" target="_blank"><strong>Argon</strong></a><?php if (get_option('argon_hide_footer_author') != 'true') {echo " By solstice23"; }?></div>
+						--->
 					</footer>
 				</main>
 			</div>
