@@ -152,7 +152,7 @@
 							<?php $ajax_url = admin_url('admin-ajax.php', 'https');?>
 							<?php if (get_option('argon_get_captcha_by_ajax', 'false') == 'true') {?>
 								<script>
-									var ajax_url = "<?php echo $ajax_url; ?>";
+									var ajax_url = <?php echo $ajax_url; ?>;
 									$(".post-comment-captcha-container").attr("captcha", "Loading...");
 									$.ajax({
 										url : ajax_url,
