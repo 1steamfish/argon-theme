@@ -2614,3 +2614,10 @@ setInterval(function(){
 	console.log('%cVersion%c' + $("meta[name='theme-version']").attr("content"), 'color:#fff; background: #5e72e4;font-size: 12px;border-radius:5px 0 0 5px;padding:3px 10px 3px 10px;','color:#fff; background: #92a1f4;font-size: 12px;border-radius:0 5px 5px 0;padding:3px 10px 3px 10px;');
 	console.log('%chttps://github.com/solstice23/argon-theme', 'font-size: 12px;border-radius:5px;padding:3px 10px 3px 10px;border:1px solid #5e72e4;');
 }();
+
+// 使用 PJAX 进行页面跳转，
+function pjaxNavigate(url) {
+    $.pjax({
+      url: url,       // 要跳转的页面 URL
+    });
+}
